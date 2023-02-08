@@ -7,9 +7,6 @@ def file_to_list(filename: str):
             words.append(line.strip())
     return words
 
-# use std::fs::File;
-# use std::io::{BufRead, BufReader};
-
 # pub fn get_first_names() -> Vec<String> {
 #     file_to_vector("first_names.txt")
 # }
@@ -23,10 +20,6 @@ def file_to_list(filename: str):
 # }
 
 # FUNCTIONS
-# use std::fs::File;
-# use std::io::prelude::*;
-# use std::path::Path;
-
 # pub fn generate_initials(first_name: &String, middle_name: &String, last_name: &String) -> String {
 #     let mut result: String = String::new();
 
@@ -64,10 +57,6 @@ def file_to_list(filename: str):
 # }
 
 # RANDOM
-# use std::ops::{Range, RangeInclusive};
-# use rand::prelude::*;
-# use rand::distributions::uniform::Uniform;
-
 # pub fn random_number(min: i32, max: i32) -> i32 {
 #     let mut rng: ThreadRng = thread_rng();
 #     let range: Uniform<i32> = Uniform::from(min..=max);
