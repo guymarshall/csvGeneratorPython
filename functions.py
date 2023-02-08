@@ -8,6 +8,12 @@ def file_to_list(filename: str):
         return []
     return words
 
+def get_names(filename: str):
+    first_names = file_to_list(filename)
+    if not first_names:
+        raise Exception(f"Error: The file '{filename}' does not exist or is empty.")
+    return first_names
+
 # pub fn get_first_names() -> Vec<String> {
 #     file_to_vector("first_names.txt")
 # }
