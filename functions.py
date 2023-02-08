@@ -1,7 +1,11 @@
 # FILE
 def file_to_list(filename: str):
-    with open(filename) as file:
-        words = [word.strip() for word in file]
+    try:
+        with open(filename) as file:
+            words = [word.strip() for word in file]
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+        return []
     return words
 
 # pub fn get_first_names() -> Vec<String> {
