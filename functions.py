@@ -14,18 +14,6 @@ def get_names(filename: str):
         raise Exception(f"Error: The file '{filename}' does not exist or is empty.")
     return first_names
 
-# pub fn get_first_names() -> Vec<String> {
-#     file_to_vector("first_names.txt")
-# }
-
-# pub fn get_middle_names() -> Vec<String> {
-#     file_to_vector("middle_names.txt")
-# }
-
-# pub fn get_last_names() -> Vec<String> {
-#     file_to_vector("last_names.txt")
-# }
-
 # FUNCTIONS
 # pub fn generate_initials(first_name: &String, middle_name: &String, last_name: &String) -> String {
 #     let mut result: String = String::new();
