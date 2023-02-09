@@ -18,22 +18,6 @@ def get_names(filename: str):
 def generate_initials(first_name: str, middle_name: str, last_name: str) -> str:
     return f"{first_name}{middle_name}{last_name}"
 
-# pub fn generate_initials(first_name: &String, middle_name: &String, last_name: &String) -> String {
-#     let mut result: String = String::new();
-
-#     if !first_name.is_empty() {
-#         result.push(first_name.chars().next().unwrap());
-#     }
-#     if !middle_name.is_empty() {
-#         result.push(middle_name.chars().next().unwrap());
-#     }
-#     if !last_name.is_empty() {
-#         result.push(last_name.chars().next().unwrap());
-#     }
-
-#     result
-# }
-
 # pub fn generate_csv(filename: &str, field_headings: &[&str], data: &[Vec<&str>]) {
 #     let path: &Path = Path::new(filename);
 #     let mut file: File = match File::create(&path) {
