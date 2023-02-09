@@ -43,13 +43,6 @@ def get_random_name(names: list[str]) -> str:
     index = random.randint(0, len(names) - 1)
     return names[index]
 
-# pub fn get_random_name(names: &Vec<String>) -> String {
-#     let mut rng: ThreadRng = thread_rng();
-#     let range: Uniform<usize> = Uniform::new(0, names.len());
-#     let index: usize = rng.sample(range);
-#     names[index].to_string()
-# }
-
 # pub fn random_day(include_weekends: bool) -> String {
 #     let days_of_week: [&str; 5] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 #     let mut rng: ThreadRng = thread_rng();
