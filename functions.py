@@ -37,6 +37,12 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]
 # RANDOM
 # to generate random number, use "random.randint(min, max)"
 
+import random
+
+def get_random_name(names: list[str]) -> str:
+    index = random.randint(0, len(names) - 1)
+    return names[index]
+
 # pub fn get_random_name(names: &Vec<String>) -> String {
 #     let mut rng: ThreadRng = thread_rng();
 #     let range: Uniform<usize> = Uniform::new(0, names.len());
