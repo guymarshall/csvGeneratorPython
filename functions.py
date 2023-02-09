@@ -35,11 +35,7 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]
         print(f"Unexpected error: {e}")
 
 # RANDOM
-# pub fn random_number(min: i32, max: i32) -> i32 {
-#     let mut rng: ThreadRng = thread_rng();
-#     let range: Uniform<i32> = Uniform::from(min..=max);
-#     range.sample(&mut rng)
-# }
+# to generate random number, use "random.randint(min, max)"
 
 # pub fn get_random_name(names: &Vec<String>) -> String {
 #     let mut rng: ThreadRng = thread_rng();
