@@ -34,27 +34,6 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]
     except Exception as e:
         print(f"Unexpected error: {e}")
 
-
-# pub fn generate_csv(filename: &str, field_headings: &[&str], data: &[Vec<&str>]) {
-#     let path: &Path = Path::new(filename);
-#     let mut file: File = match File::create(&path) {
-#         Err(why) => panic!("couldn't create {}: {}", path.display(), why),
-#         Ok(file) => file,
-#     };
-
-#     let headings: String = field_headings.join(",");
-#     if let Err(why) = writeln!(file, "{}", headings) {
-#         panic!("couldn't write to {}: {}", path.display(), why);
-#     }
-
-#     for record in data {
-#         let line: String = record.join(",");
-#         if let Err(why) = writeln!(file, "{}", line) {
-#             panic!("couldn't write to {}: {}", path.display(), why);
-#         }
-#     }
-# }
-
 # RANDOM
 # pub fn random_number(min: i32, max: i32) -> i32 {
 #     let mut rng: ThreadRng = thread_rng();
