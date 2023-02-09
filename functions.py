@@ -18,14 +18,22 @@ def get_names(filename: str):
 def generate_initials(first_name: str, middle_name: str, last_name: str) -> str:
     return f"{first_name}{middle_name}{last_name}"
 
-def generate_csv(filename, field_headings, data) -> None:
-    with open(filename, 'w') as file:
-        headings = ",".join(field_headings)
-        file.write(headings + "\n")
+def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]) -> None:
+    try:
+        with open(filename, "w") as file:
+            headings = ",".join(field_headings)
+            file.write(headings + "\n")
 
-        for record in data:
-            line = ",".join(record)
-            file.write(line + "\n")
+            for record in data:
+                line = ",".join(record)
+                file.write(line + "\n")
+    except FileNotFoundError as e:
+        print(f"File not found: {e}")
+    except PermissionError as e:
+        print(f"Permission error: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+
 
 # pub fn generate_csv(filename: &str, field_headings: &[&str], data: &[Vec<&str>]) {
 #     let path: &Path = Path::new(filename);
