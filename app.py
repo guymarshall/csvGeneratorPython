@@ -51,7 +51,14 @@ csv_fields = {
 }
 
 def main():
-	print("Running")
+	print("CSV Generator - Enter counts for the following prompts to generate your .CSV file.")
+	curriculum_count = int(input("Curriculum Count:"))
+	period_schedule_count = int(input("Period Schedule Count:"))
+	room_count = int(input("Room Count:"))
+	student_count = int(input("Student Count:"))
+	subject_count = int(input("Subject Count:"))
+	teacher_count = int(input("Teacher Count:"))
+	teacher_type_count = int(input("Teacher Type Count:"))
 
 # fn main() {
 #     println!("CSV Generator - Enter counts for the following prompts to generate your .CSV file.");
