@@ -143,6 +143,17 @@ def main():
 		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	]
 	subject_data = []
+	for i in range(0, subject_count + 1):
+		subject_data.append([
+			i + 1,
+			# subjectName
+			random.randint(1, 5),
+			str(random.randint(1, 8)),
+			random.randint(20, 32),
+			# teachers
+			# roomsTaught list(int) quoted e.g. "2, 3, 4, 5"
+		])
+	generate_csv("Subject.csv", ["id", "subjectName", "subjectYear", "set", "maximumClassSize", "teachers", "roomsTaught"], subject_data)
 
 	teacher_fields = [
 		"id", # int
