@@ -1,3 +1,6 @@
+from functions import get_count
+
+
 csv_fields = {
 	"teacher": [
 		"id", # int
@@ -52,13 +55,14 @@ csv_fields = {
 
 def main():
 	print("CSV Generator - Enter counts for the following prompts to generate your .CSV file.")
-	curriculum_count = int(input("Curriculum Count:"))
-	period_schedule_count = int(input("Period Schedule Count:"))
-	room_count = int(input("Room Count:"))
-	student_count = int(input("Student Count:"))
-	subject_count = int(input("Subject Count:"))
-	teacher_count = int(input("Teacher Count:"))
-	teacher_type_count = int(input("Teacher Type Count:"))
+	curriculum_count = get_count("Curriculum Count:")
+	period_schedule_count = get_count("Period Schedule Count:")
+	room_count = get_count("Room Count:")
+	student_count = get_count("Student Count:")
+	subject_count = get_count("Subject Count:")
+	teacher_count = get_count("Teacher Count:")
+	teacher_type_count = get_count("Teacher Type Count:")
+
 
 # fn main() {
 #     if curriculum_count < 1
