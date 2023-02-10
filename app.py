@@ -65,6 +65,14 @@ def main():
 	teacher_type_count = get_count("Teacher Type Count:")
 
 	curriculum_data = []
+	for i in range(0, curriculum_count + 1):
+		curriculum_data.append([
+			i + 1,
+			random.randint(1, student_count + 1),
+			random.randint(1, subject_count + 1),
+			random.randint(1, 10)
+		])
+	generate_csv("Curriculum.csv", ["id", "studentID", "subjectID", "numberOfLessonsPerWeek"], curriculum_data)
 
 	period_schedule_data = []
 
