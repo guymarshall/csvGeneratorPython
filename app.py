@@ -1,52 +1,52 @@
 csv_fields = {
 	"teacher": [
-		"id",
-		"firstName",
-		"middleNames",
-		"surname",
-		"initials",
-		"teacherType",
-		"subjectsTaught",
-		"roomsTaught"
+		"id", # int
+		"firstName", # str
+		"middleNames", # str
+		"surname", # str
+		"initials", # str
+		"teacherType", # int
+		"subjectsTaught", # list[int] quoted e.g. "1, 2, 3"
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	],
 	"teacher_type": [
-		"id",
-		"name",
-		"displayName"
+		"id", # int
+		"name", # str
+		"displayName" # str
 	],
 	"subject": [
-		"id",
-		"subjectName",
-		"subjectYear",
-		"set",
-		"maximumClassSize",
-		"teachers",
-		"roomsTaught"
+		"id", # int
+		"subjectName", # str
+		"subjectYear", # int
+		"set", # int quoted e.g "3"
+		"maximumClassSize", # int
+		"teachers", # ?
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	],
 	"room": [
-		"id",
-		"name",
-		"maximumClassSize",
-		"subjectsTaught",
-		"teachers"
+		"id", # int
+		"name", # str
+		"maximumClassSize", # int
+		"subjectsTaught", # ?
+		"teachers" # ?
 	],
 	"student": [
-		"id",
-		"firstName",
-		"middleNames",
-		"surname",
-		"initials"
+		"id", # int quoted e.g. "1"
+		"firstName", # str
+		"middleNames", # str
+		"surname", # str
+		"initials" # str
 	],
 	"curriculum": [
-		"id",
-		"studentID",
-		"subjectID",
-		"numberOfLessonsPerWeek"
+		"id", # int
+		"studentID", # int
+		"subjectID", # int
+		"numberOfLessonsPerWeek" # int
 	],
 	"period_schedule": [
-		"id",
-		"dayOfWeek",
-		"numberOfPeriods"
+		"id", # int
+		"dayOfWeek", # ?str?
+		"numberOfPeriods" # int
 	]
 }
 
