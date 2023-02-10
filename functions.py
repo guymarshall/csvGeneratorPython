@@ -37,6 +37,13 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]
 def add_quotes(s: str) -> str:
     return f'"{s}"'
 
+def get_count(prompt: str) -> int:
+    count = int(input(prompt))
+    if count <= 0:
+        print("Count must be greater than 0. Quitting program.")
+        quit()
+    return count
+
 # RANDOM
 # to generate random number, use "random.randint(min, max)"
 
