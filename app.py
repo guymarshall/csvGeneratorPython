@@ -65,16 +65,6 @@ def main():
 
 
 # fn main() {
-#     const FILES: &[(&str, &[&str])] = &[
-#         ("curriculum", &["studentID", "subjectID", "numberOfLessonsPerWeek"]),
-#         ("period_schedule", &["dayOfWeek", "numberOfPeriods"]),
-#         ("room", &["name", "maximumClassSize"]),
-#         ("student", &["firstName", "middleNames", "surname", "initials"]),
-#         ("subject", &["subjectName", "subjectYear", "set", "maximumClassSize", "roomsTaught"]),
-#         ("teacher", &["firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"]),
-#         ("teacher_type", &["name", "displayName"]),
-#     ];
-
 #     struct Curriculum {
 #         index: String,
 #         subject_id: i32,
