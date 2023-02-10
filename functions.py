@@ -25,6 +25,7 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[objec
             file.write(headings + "\n")
 
             for record in data:
+                #TODO if datatype of record is str, use add_quotes(record)
                 line = ",".join(record)
                 file.write(line + "\n")
     except FileNotFoundError as e:
