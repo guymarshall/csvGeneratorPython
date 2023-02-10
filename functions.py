@@ -67,6 +67,18 @@ def generate_random_length_random_list() -> list(int):
 
     return output
 
+def random_teacher_type(type_type: str) -> str:
+    names = ["Teacher", "Cover Teacher", "Trainee Teacher", "Head of Department"]
+    display_names = ["Teacher", "Cover", "Trainee", "Head"]
+
+    match type_type:
+        case "name":
+            return random.choice(names)
+        case "displayName":
+            return random.choice(display_names)
+        case other:
+            raise RuntimeError("Incorrect value for 'type_type' when calling 'random_teacher_type'")
+
 # pub fn random_teacher_type(type_: &str) -> &str {
 #     let names: [&str; 4] = ["Teacher", "Cover Teacher", "Trainee Teacher", "Head of Department"];
 #     let display_names: [&str; 4] = ["Teacher", "Cover", "Trainee", "Head"];
