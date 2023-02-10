@@ -61,15 +61,6 @@ def main():
 	teacher_type_count = int(input("Teacher Type Count:"))
 
 # fn main() {
-#     println!("CSV Generator - Enter counts for the following prompts to generate your .CSV file.");
-#     let curriculum_count: i32 = user_input::get_user_input("Curriculum Count:");
-#     let period_schedule_count: i32 = user_input::get_user_input("Period Schedule Count:");
-#     let room_count: i32 = user_input::get_user_input("Room Count:");
-#     let student_count: i32 = user_input::get_user_input("Student Count:");
-#     let subject_count: i32 = user_input::get_user_input("Subject Count:");
-#     let teacher_count: i32 = user_input::get_user_input("Teacher Count:");
-#     let teacher_type_count: i32 = user_input::get_user_input("Teacher Type Count:");
-
 #     if curriculum_count < 1
 #         || period_schedule_count < 1
 #         || room_count < 1
