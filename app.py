@@ -93,7 +93,7 @@ def main():
 			middle_name,
 			last_name,
 			generate_initials(first_name, middle_name, last_name),
-			random.randint(0, teacher_type_count + 1),
+			random.randint(1, teacher_type_count + 1),
 			generate_random_length_random_list(),
 			generate_random_length_random_list()
 		])
