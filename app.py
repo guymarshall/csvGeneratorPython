@@ -64,6 +64,12 @@ def main():
 	teacher_count = get_count("Teacher Count:")
 	teacher_type_count = get_count("Teacher Type Count:")
 
+	curriculum_fields = [
+		"id", # int
+		"studentID", # int
+		"subjectID", # int
+		"numberOfLessonsPerWeek" # int
+	]
 	curriculum_data = []
 	for i in range(0, curriculum_count + 1):
 		curriculum_data.append([
@@ -74,14 +80,52 @@ def main():
 		])
 	generate_csv("Curriculum.csv", ["id", "studentID", "subjectID", "numberOfLessonsPerWeek"], curriculum_data)
 
+	period_schedule_fields = [
+		"id", # int
+		"dayOfWeek", # ?str?
+		"numberOfPeriods" # int
+	]
 	period_schedule_data = []
 
+	room_fields = [
+		"id", # int
+		"name", # str
+		"maximumClassSize", # int
+		"subjectsTaught", # ?
+		"teachers" # ?
+	]
 	room_data = []
 
+	student_fields = [
+		"id", # int quoted e.g. "1"
+		"firstName", # str
+		"middleNames", # str
+		"surname", # str
+		"initials" # str
+	]
 	student_data = []
 
+	subject_fields = [
+		"id", # int
+		"subjectName", # str
+		"subjectYear", # int
+		"set", # int quoted e.g "3"
+		"maximumClassSize", # int
+		"teachers", # ?
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
+	]
 	subject_data = []
 
+	teacher_fields = [
+		"id", # int
+		"firstName", # str
+		"middleNames", # str
+		"surname", # str
+		"initials", # str
+		"teacherType", # int
+		"subjectsTaught", # list[int] quoted e.g. "1, 2, 3"
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
+	]
 	teacher_data = []
 	for i in range(0, teacher_count + 1):
 		first_name = get_random_name("first_names.txt")
@@ -99,6 +143,11 @@ def main():
 		])
 	generate_csv("Teacher.csv", ["id", "firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
 
+	teacher_type_fields = [
+		"id", # int
+		"name", # str
+		"displayName" # str
+	]
 	teacher_type_data = []
 
 if __name__ == "__main__":
