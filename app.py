@@ -1,5 +1,5 @@
 import random
-from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name, random_day
+from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name, random_day, random_teacher_type
 
 
 csv_fields = {
