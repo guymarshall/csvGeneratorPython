@@ -102,6 +102,15 @@ def main():
 		"teachers" # ?
 	]
 	room_data = []
+	for i in range(0, room_count):
+		room_data.append([
+			i + 1,
+			random_room(),
+			random.randint(20, 32),
+			# subjectsTaught
+			# teachers
+		])
+	generate_csv("Room.csv", ["id", "name", "maximumClassSize", "subjectsTaught", "teachers"], room_data)
 
 	student_fields = [
 		"id", # int quoted e.g. "1"
