@@ -64,6 +64,16 @@ def main():
 	teacher_count = get_count("Teacher Count:")
 	teacher_type_count = get_count("Teacher Type Count:")
 
+	curriculum_data = []
+
+	period_schedule_data = []
+
+	room_data = []
+
+	student_data = []
+
+	subject_data = []
+
 	teacher_data = []
 	for i in range(0, teacher_count + 1):
 		first_name = get_random_name("first_names.txt")
@@ -79,6 +89,8 @@ def main():
 			generate_random_length_random_list()
 		])
 	generate_csv("Teacher.csv", ["firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
+
+	teacher_type_data = []
 
 if __name__ == "__main__":
 	main()
