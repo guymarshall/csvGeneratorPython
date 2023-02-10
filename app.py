@@ -1,4 +1,5 @@
-from functions import get_count
+import random
+from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name
 
 
 csv_fields = {
@@ -63,6 +64,21 @@ def main():
 	teacher_count = get_count("Teacher Count:")
 	teacher_type_count = get_count("Teacher Type Count:")
 
+	teacher_data = []
+	for i in range(0, teacher_count + 1):
+		first_name = get_random_name("first_names.txt")
+		middle_name = get_random_name("middle_names.txt")
+		last_name = get_random_name("last_names.txt")
+		teacher_data.append([
+			first_name,
+			middle_name,
+			last_name,
+			generate_initials(first_name, middle_name, last_name),
+			random.randint(0, 100),
+			generate_random_length_random_list(),
+			generate_random_length_random_list()
+		])
+	generate_csv("Teacher.csv", ["firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
 
 # fn main() {
 #     struct Curriculum {
