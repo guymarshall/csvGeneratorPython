@@ -1,5 +1,5 @@
 import random
-from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name
+from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name, random_day
 
 
 csv_fields = {
@@ -86,6 +86,13 @@ def main():
 		"numberOfPeriods" # int
 	]
 	period_schedule_data = []
+	for i in range(0, period_schedule_count + 1):
+		period_schedule_data.append([
+			i + 1,
+			random_day(),
+			random.randint(1, 10)
+		])
+	generate_csv("PeriodSchedule.csv", ["id", "dayOfWeek", "numberOfPeriods"], period_schedule_data)
 
 	room_fields = [
 		"id", # int
