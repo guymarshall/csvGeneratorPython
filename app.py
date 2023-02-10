@@ -50,6 +50,9 @@ csv_fields = {
 	]
 }
 
+def main():
+	print("Running")
+
 # fn main() {
 #     println!("CSV Generator - Enter counts for the following prompts to generate your .CSV file.");
 #     let curriculum_count: i32 = user_input::get_user_input("Curriculum Count:");
@@ -200,3 +203,6 @@ csv_fields = {
 # }
 # generate_csv('TeacherType.csv', ['name', 'displayName'], $teacher_type_data);
 # */
+
+if __name__ == "__main__":
+	main()
