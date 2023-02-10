@@ -34,6 +34,9 @@ def generate_csv(filename: str, field_headings: list[str], data: list[list[str]]
     except Exception as e:
         print(f"Unexpected error: {e}")
 
+def add_quotes(s: str) -> str:
+    return f'"{s}"'
+
 # RANDOM
 # to generate random number, use "random.randint(min, max)"
 
