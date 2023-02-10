@@ -80,6 +80,7 @@ def main():
 		middle_name = get_random_name("middle_names.txt")
 		last_name = get_random_name("last_names.txt")
 		teacher_data.append([
+			i + 1,
 			first_name,
 			middle_name,
 			last_name,
@@ -88,7 +89,7 @@ def main():
 			generate_random_length_random_list(),
 			generate_random_length_random_list()
 		])
-	generate_csv("Teacher.csv", ["firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
+	generate_csv("Teacher.csv", ["id", "firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
 
 	teacher_type_data = []
 
