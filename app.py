@@ -120,6 +120,18 @@ def main():
 		"initials" # str
 	]
 	student_data = []
+	for i in range(0, student_count + 1):
+		first_name = get_random_name("first_names.txt")
+		middle_name = get_random_name("middle_names.txt")
+		last_name = get_random_name("last_names.txt")
+		student_data.append([
+			str(i + 1),
+			first_name,
+			middle_name,
+			last_name,
+			generate_initials(first_name, middle_name, last_name)
+		])
+	generate_csv("Student.csv", ["id", "firstName", "middleName", "surname", "initials"], student_data)
 
 	subject_fields = [
 		"id", # int
