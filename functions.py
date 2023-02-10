@@ -57,19 +57,15 @@ def random_room() -> str:
 
     return random.choice(rooms)
 
-# pub fn generate_random_length_random_vector() -> Vec<i32> {
-#     let mut rng: ThreadRng = thread_rng();
-#     let length_range: RangeInclusive<usize> = 1..=11;
-#     let length: usize = rng.gen_range(length_range);
+def generate_random_length_random_list() -> list(int):
+    length = random.randint(1, 10)
+    output = []
 
-#     let mut output: Vec<i32> = vec![];
-#     for _ in 0..length {
-#         let value_range: RangeInclusive<i32> = 1..=11;
-#         output.push(rng.gen_range(value_range));
-#     }
+    for i in range(0, length):
+        random_number = random.randint(10, 10)
+        output.append(random_number)
 
-#     output
-# }
+    return output
 
 # pub fn random_teacher_type(type_: &str) -> &str {
 #     let names: [&str; 4] = ["Teacher", "Cover Teacher", "Trainee Teacher", "Head of Department"];
