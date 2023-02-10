@@ -43,6 +43,15 @@ def get_random_name(names: list[str]) -> str:
     index = random.randint(0, len(names) - 1)
     return names[index]
 
+def random_day(include_weekends = False) -> str:
+    days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+    if include_weekends:
+        days_of_week.append("Saturday")
+        days_of_week.append("Sunday")
+    
+    return random.choice(days_of_week)
+
 # pub fn random_day(include_weekends: bool) -> String {
 #     let days_of_week: [&str; 5] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 #     let mut rng: ThreadRng = thread_rng();
