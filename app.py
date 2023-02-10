@@ -177,8 +177,8 @@ def main():
 			last_name,
 			generate_initials(first_name, middle_name, last_name),
 			random.randint(1, teacher_type_count + 1),
-			generate_random_length_random_list(),
-			generate_random_length_random_list()
+			", ".join(map(str, generate_random_length_random_list())),
+			", ".join(map(str, generate_random_length_random_list()))
 		])
 	generate_csv("Teacher.csv", ["id", "firstName", "middleName", "surname", "initials", "teacherTypeID", "subjectTaughtIDs", "roomTaughtIDs"], teacher_data)
 
