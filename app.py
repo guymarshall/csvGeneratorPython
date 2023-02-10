@@ -188,6 +188,13 @@ def main():
 		"displayName" # str
 	]
 	teacher_type_data = []
+	for i in range(0, teacher_type_count + 1):
+		teacher_type_data.append([
+			i + 1,
+			random_teacher_type("name"),
+			random_teacher_type("displayName")
+		])
+	generate_csv("TeacherType.csv", ["id", "name", "displayName"], teacher_type_data)
 
 if __name__ == "__main__":
 	main()
