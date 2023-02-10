@@ -2,29 +2,16 @@ from functions import get_count
 
 
 csv_fields = {
-	"teacher": [
+	"curriculum": [
 		"id", # int
-		"firstName", # str
-		"middleNames", # str
-		"surname", # str
-		"initials", # str
-		"teacherType", # int
-		"subjectsTaught", # list[int] quoted e.g. "1, 2, 3"
-		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
+		"studentID", # int
+		"subjectID", # int
+		"numberOfLessonsPerWeek" # int
 	],
-	"teacher_type": [
+	"period_schedule": [
 		"id", # int
-		"name", # str
-		"displayName" # str
-	],
-	"subject": [
-		"id", # int
-		"subjectName", # str
-		"subjectYear", # int
-		"set", # int quoted e.g "3"
-		"maximumClassSize", # int
-		"teachers", # ?
-		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
+		"dayOfWeek", # ?str?
+		"numberOfPeriods" # int
 	],
 	"room": [
 		"id", # int
@@ -40,17 +27,30 @@ csv_fields = {
 		"surname", # str
 		"initials" # str
 	],
-	"curriculum": [
+	"subject": [
 		"id", # int
-		"studentID", # int
-		"subjectID", # int
-		"numberOfLessonsPerWeek" # int
+		"subjectName", # str
+		"subjectYear", # int
+		"set", # int quoted e.g "3"
+		"maximumClassSize", # int
+		"teachers", # ?
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	],
-	"period_schedule": [
+	"teacher": [
 		"id", # int
-		"dayOfWeek", # ?str?
-		"numberOfPeriods" # int
-	]
+		"firstName", # str
+		"middleNames", # str
+		"surname", # str
+		"initials", # str
+		"teacherType", # int
+		"subjectsTaught", # list[int] quoted e.g. "1, 2, 3"
+		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
+	],
+	"teacher_type": [
+		"id", # int
+		"name", # str
+		"displayName" # str
+	],
 }
 
 def main():
