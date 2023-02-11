@@ -64,6 +64,10 @@ def main():
 	teacher_count = get_count("Teacher Count: ")
 	teacher_type_count = get_count("Teacher Type Count: ")
 
+	first_names = get_names("first_names.txt")
+	middle_names = get_names("middle_names.txt")
+	last_names = get_names("last_names.txt")
+
 	curriculum_fields = [
 		"id", # int
 		"studentID", # int
@@ -121,9 +125,9 @@ def main():
 	]
 	student_data = []
 	for i in range(0, student_count + 1):
-		first_name = get_random_name(get_names("first_names.txt"))
-		middle_name = get_random_name(get_names("middle_names.txt"))
-		last_name = get_random_name(get_names("last_names.txt"))
+		first_name = get_random_name(first_names)
+		middle_name = get_random_name(middle_names)
+		last_name = get_random_name(last_names)
 		student_data.append([
 			str(i + 1),
 			first_name,
@@ -167,9 +171,9 @@ def main():
 	]
 	teacher_data = []
 	for i in range(0, teacher_count + 1):
-		first_name = get_random_name(get_names("first_names.txt"))
-		middle_name = get_random_name(get_names("middle_names.txt"))
-		last_name = get_random_name(get_names("last_names.txt"))
+		first_name = get_random_name(first_names)
+		middle_name = get_random_name(middle_names)
+		last_name = get_random_name(last_names)
 		teacher_data.append([
 			i + 1,
 			first_name,
