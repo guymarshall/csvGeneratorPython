@@ -1,5 +1,5 @@
 import random
-from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_random_name, random_day, random_room, random_teacher_type
+from functions import generate_csv, generate_initials, generate_random_length_random_list, get_count, get_names, get_random_name, random_day, random_room, random_teacher_type
 
 
 csv_fields = {
@@ -121,9 +121,9 @@ def main():
 	]
 	student_data = []
 	for i in range(0, student_count + 1):
-		first_name = get_random_name("first_names.txt")
-		middle_name = get_random_name("middle_names.txt")
-		last_name = get_random_name("last_names.txt")
+		first_name = get_random_name(get_names("first_names.txt"))
+		middle_name = get_random_name(get_names("middle_names.txt"))
+		last_name = get_random_name(get_names("last_names.txt"))
 		student_data.append([
 			str(i + 1),
 			first_name,
@@ -167,9 +167,9 @@ def main():
 	]
 	teacher_data = []
 	for i in range(0, teacher_count + 1):
-		first_name = get_random_name("first_names.txt")
-		middle_name = get_random_name("middle_names.txt")
-		last_name = get_random_name("last_names.txt")
+		first_name = get_random_name(get_names("first_names.txt"))
+		middle_name = get_random_name(get_names("middle_names.txt"))
+		last_name = get_random_name(get_names("last_names.txt"))
 		teacher_data.append([
 			i + 1,
 			first_name,
