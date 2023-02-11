@@ -69,7 +69,7 @@ def random_room() -> str:
 
     return random.choice(rooms)
 
-def generate_random_length_random_list() -> list(int):
+def generate_random_length_random_list() -> list[int]:
     length = random.randint(1, 10)
     output = []
 
