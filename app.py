@@ -106,7 +106,7 @@ def main():
 		"teachers" # ?
 	]
 	room_data = []
-	for i in range(0, room_count):
+	for i in range(0, room_count + 1):
 		room_data.append([
 			i + 1,
 			random_room(),
