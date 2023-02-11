@@ -75,7 +75,7 @@ def main():
 		"numberOfLessonsPerWeek" # int
 	]
 	curriculum_data = []
-	for i in range(0, curriculum_count + 1):
+	for i in range(1, curriculum_count + 1):
 		curriculum_data.append([
 			i + 1,
 			random.randint(1, student_count + 1),
@@ -90,7 +90,7 @@ def main():
 		"numberOfPeriods" # int
 	]
 	period_schedule_data = []
-	for i in range(0, period_schedule_count + 1):
+	for i in range(1, period_schedule_count + 1):
 		period_schedule_data.append([
 			i + 1,
 			random_day(),
@@ -106,7 +106,7 @@ def main():
 		"teachers" # ?
 	]
 	room_data = []
-	for i in range(0, room_count):
+	for i in range(1, room_count):
 		room_data.append([
 			i + 1,
 			random_room(),
@@ -124,7 +124,7 @@ def main():
 		"initials" # str
 	]
 	student_data = []
-	for i in range(0, student_count + 1):
+	for i in range(1, student_count + 1):
 		first_name = get_random_name(first_names)
 		middle_name = get_random_name(middle_names)
 		last_name = get_random_name(last_names)
@@ -147,7 +147,7 @@ def main():
 		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	]
 	subject_data = []
-	for i in range(0, subject_count + 1):
+	for i in range(1, subject_count + 1):
 		subject_data.append([
 			i + 1,
 			# subjectName
@@ -170,7 +170,7 @@ def main():
 		"roomsTaught" # list[int] quoted e.g. "2, 3, 4, 5"
 	]
 	teacher_data = []
-	for i in range(0, teacher_count + 1):
+	for i in range(1, teacher_count + 1):
 		first_name = get_random_name(first_names)
 		middle_name = get_random_name(middle_names)
 		last_name = get_random_name(last_names)
@@ -192,7 +192,7 @@ def main():
 		"displayName" # str
 	]
 	teacher_type_data = []
-	for i in range(0, teacher_type_count + 1):
+	for i in range(1, teacher_type_count + 1):
 		teacher_type_data.append([
 			i + 1,
 			random_teacher_type("name"),
