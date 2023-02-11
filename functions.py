@@ -16,7 +16,7 @@ def get_names(filename: str):
 
 # FUNCTIONS
 def generate_initials(first_name: str, middle_name: str, last_name: str) -> str:
-    return f"{first_name}{middle_name}{last_name}"
+    return f"{first_name[0]}{middle_name[0]}{last_name[0]}"
 
 def generate_csv(filename: str, field_headings: list[str], data: list[object]) -> None:
     try:
