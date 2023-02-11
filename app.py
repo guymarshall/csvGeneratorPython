@@ -56,13 +56,13 @@ csv_fields = {
 
 def main():
 	print("CSV Generator - Enter counts for the following prompts to generate your .CSV file.")
-	curriculum_count = get_count("Curriculum Count:")
-	period_schedule_count = get_count("Period Schedule Count:")
-	room_count = get_count("Room Count:")
-	student_count = get_count("Student Count:")
-	subject_count = get_count("Subject Count:")
-	teacher_count = get_count("Teacher Count:")
-	teacher_type_count = get_count("Teacher Type Count:")
+	curriculum_count = get_count("Curriculum Count: ")
+	period_schedule_count = get_count("Period Schedule Count: ")
+	room_count = get_count("Room Count: ")
+	student_count = get_count("Student Count: ")
+	subject_count = get_count("Subject Count: ")
+	teacher_count = get_count("Teacher Count: ")
+	teacher_type_count = get_count("Teacher Type Count: ")
 
 	curriculum_fields = [
 		"id", # int
